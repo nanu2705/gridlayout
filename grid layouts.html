@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 200px ;
+    }
+    .grid{
+       
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+       
+       
+    }
+
+    .grid>div{
+       border: 1px solid black;
+        text-align: center;
+        font-size: 32px;
+        background-color: blueviolet;
+        
+      
+    }
+    
+    div{
+         height: 200px;
+         width: 200px;
+         gap: 10px;
+         
+    }
+
+    .grid>div:nth-child(1){
+        grid-row-start: 1;
+        grid-row-end: 4;
+        height: 600px;
+    }
+    
+    .grid>div:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        width: 600px;
+    }
+
+    .grid>div:nth-child(4){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 300px;
+    }
+    .grid>div:nth-child(5){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        width: 300px;
+    }
+
+    .grid>div:nth-child(6){
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 400px;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+     
+    .grid>div:nth-child(7){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        width: 300px;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .grid>div:nth-child(8){
+        grid-column-start:3;
+        grid-column-end: 4;
+        width: 300px;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    } 
+
+    @media screen and (max-width:786px){
+        body{
+            height: auto;
+            width: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .grid{
+           display: flex;
+           flex-flow: wrap;
+           gap: 20px;
+            
+            text-align: center;
+            
+        }
+    }
+
+    
+</style>
+<body>
+    <div class="grid">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+   
+ 
+    
+    </div>
+</body>
+</html>
